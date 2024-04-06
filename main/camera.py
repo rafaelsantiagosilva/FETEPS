@@ -4,7 +4,7 @@ import serial
 import time
 ard = serial.Serial("COM3", 9600)
 face_cascade = cv2.CascadeClassifier('./main/haarcascade_frontalface_alt.xml') 
-vid = cv2.VideoCapture(1)
+vid = cv2.VideoCapture(0)
 while True:
 	_, frame = vid.read()#reads the current frame to the variable frame
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)#converts frame -> grayscaled image
